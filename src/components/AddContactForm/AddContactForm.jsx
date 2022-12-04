@@ -3,6 +3,9 @@ import { useSelector, useDispatch } from 'react-redux';
 import { selectContacts } from '../../redux/selectors';
 import { addContact } from '../../redux/operations';
 import css from './AddContactForm.module.css';
+import * as React from 'react';
+import Input from '@mui/material/Input';
+import Button from '@mui/material/Button';
 
 const AddContactForm = () => {
   const [name, setName] = useState('');
@@ -49,7 +52,8 @@ const AddContactForm = () => {
   return (
     <form className={css.form} onSubmit={handleSubmit}>
       <label className={css.label}>Name</label>
-      <input
+      <Input
+        variant="contained"
         className={css.input}
         value={name}
         onChange={handleChange}
@@ -60,7 +64,8 @@ const AddContactForm = () => {
         required
       />
       <label className={css.label}>Number</label>
-      <input
+      <Input
+        variant="contained"
         className={css.input}
         value={number}
         onChange={handleChange}
@@ -70,9 +75,9 @@ const AddContactForm = () => {
         title="Phone number must be digits and can contain spaces, dashes, parentheses and can start with +"
         required
       />
-      <button type="submit" className={css.btn}>
+      <Button variant="contained" type="submit" className={css.btn}>
         Add contact
-      </button>
+      </Button>
     </form>
   );
 };

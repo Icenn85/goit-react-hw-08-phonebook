@@ -3,6 +3,7 @@ import css from './SearchFilter.module.css';
 import { useSelector, useDispatch } from 'react-redux';
 import { filterContactsAction } from '../../redux/filterSlice';
 import { selectFilterValue } from '../../redux/selectors';
+import Input from '@mui/material/Input';
 
 const SearchFilter = () => {
   const filter = useSelector(selectFilterValue);
@@ -15,7 +16,7 @@ const SearchFilter = () => {
   return (
     <div>
       <h3 className={css.filter__title}>Find contacts by name</h3>
-      <input
+      <Input variant="contained" 
         placeholder="Search"
         type="text"
         name="filter"

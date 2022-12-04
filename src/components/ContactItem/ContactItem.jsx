@@ -2,6 +2,8 @@ import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
 import { deleteContact } from '../../redux/operations';
 import css from './ContactItem.module.css';
+import Button from '@mui/material/Button';
+
 
 export function ContactItem({ id, name, number }) {
   const dispatch = useDispatch();
@@ -10,13 +12,13 @@ export function ContactItem({ id, name, number }) {
     <li key={id} className={css.contacts__item}>
       <p className={css.contacts__text}>{name}:</p>
       <p className={css.contact__text}>{number}</p>
-      <button
+      <Button variant="contained"
         type="button"
         className={css.btn}
         onClick={() => dispatch(deleteContact(id))}
       >
         Delete
-      </button>
+      </Button>
     </li>
   );
 }

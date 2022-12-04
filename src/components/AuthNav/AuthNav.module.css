@@ -1,0 +1,18 @@
+.active {
+  display: inline-block;
+  text-decoration: none;
+  padding: 12px;
+  font-weight: 500;
+  color: #A9A9F5;
+  font-size: 18px;
+}
+
+.link {
+  display: inline-block;
+  text-decoration: none;
+  padding: 12px;
+  font-weight: 500;
+  color: #210B61;
+  font-size: 18px;
+}
+
