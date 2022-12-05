@@ -1,0 +1,1 @@
+{"version":3,"file":"static/js/983.88f0e6db.chunk.js","mappings":"qKAMA,UAJiB,WACf,OAAO,SAAC,IAAD,GACR,C","sources":["pages/HomePage.jsx"],"sourcesContent":["import AppBar from '../components/AppBar/AppBar';\n\nconst HomePage = () => {\n  return <AppBar />;\n};\n\nexport default HomePage;\n"],"names":[],"sourceRoot":""}
