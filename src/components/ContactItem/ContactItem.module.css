@@ -1,7 +1,8 @@
 .contacts__item {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  /* justify-content: space-between; */
   align-items: center;
+  grid-template-columns: 1fr 1fr 1fr;
 }
 .contacts__text {
   margin-right: 12px;

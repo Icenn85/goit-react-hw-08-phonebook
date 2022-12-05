@@ -19,10 +19,7 @@ const HomePage = () => {
   return (
     <div style={css.container}>
       <h1 style={css.title}>
-        Welcome to our phonebook{' '}
-        <span role="img" aria-label="Иконка приветствия">
-          💁‍♀️
-        </span>
+        Welcome to our phonebook
       </h1>
     </div>
   );
