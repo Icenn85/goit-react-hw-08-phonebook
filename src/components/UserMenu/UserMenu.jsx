@@ -3,28 +3,19 @@ import authSelectors from '../../redux/auth/authSelectors';
 import authOperations from '../../redux/auth/authOperations';
 import * as React from 'react';
 import Button from '@mui/material/Button';
-
-const styles = {
-  container: {
-    display: 'flex',
-    alignItems: 'center',
-  },
-  name: {
-    fontWeight: 700,
-    marginRight: 12,
-  },
-};
+import css from './UserMenu.module.css';
 
 const UserMenu = () => {
     const dispatch = useDispatch();
     const name = useSelector(authSelectors.selectUser);
 
     return (
-      <div style={styles.container}>
-        <span style={styles.name}>Welcome, {name}</span>
+      <div className={css.container}>
+        <p className={css.name}>Welcome, {name}</p>
 
         <Button
           variant="contained"
+          className={css.btn}
           size="medium"
           type="button"
           onClick={() => dispatch(authOperations.logOut())}

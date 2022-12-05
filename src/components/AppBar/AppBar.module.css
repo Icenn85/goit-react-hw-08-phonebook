@@ -1,11 +1,13 @@
 .header {
     display: flex;
+    position: sticky;
     justify-content: space-between;
     align-items: center;
     text-decoration: none;
-    padding: 12;
+    padding: 25px;
     font-weight: 700;
     border-bottom: 2px solid #210B61;
     box-shadow: 3px 3px 5px #210B61;
+    border-radius: 10px;
     font-size: 18px;
   }

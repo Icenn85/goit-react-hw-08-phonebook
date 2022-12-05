@@ -4,17 +4,7 @@ import authOperations from '../../redux/auth/authOperations';
 import * as React from 'react';
 import Input from '@mui/material/Input';
 import Button from '@mui/material/Button';
-
-const styles = {
-  form: {
-    width: 320,
-  },
-  label: {
-    display: 'flex',
-    flexDirection: 'column',
-    marginBottom: 15,
-  },
-};
+import css from './LoginForm.module.css';
 
 const LoginForm = () => {
     const dispatch = useDispatch();
@@ -46,9 +36,9 @@ const LoginForm = () => {
 
   return (
     <div>
-      <h1>Log In page</h1>
-      <form onSubmit={handleSubmit} style={styles.form} autoComplete="off">
-        <label style={styles.label}>
+      <h1 className={css.form__title}>Log In Form</h1>
+      <form onSubmit={handleSubmit} className={css.form} autoComplete="off">
+        <label className={css.label}>
           Email
           <Input
             variant="contained"
@@ -60,7 +50,7 @@ const LoginForm = () => {
           />
         </label>
 
-        <label style={styles.label}>
+        <label className={css.label}>
           Password
           <Input
             variant="contained"
@@ -72,7 +62,7 @@ const LoginForm = () => {
           />
         </label>
 
-        <Button variant="contained" type="submit">
+        <Button variant="contained" type="submit" className={css.btn}>
           Log In
         </Button>
       </form>

@@ -1,0 +1,25 @@
+.container {
+    display: flex;
+    align-items: center;
+}
+
+.name {
+    display: inline-block;
+    color: #210B61;
+    font-style: italic;
+    font-weight: 500;
+    font-size: 18px;
+}
+
+.btn {
+    font-weight: 500;
+    color: #A9A9F5;
+    background-color: #210B61;
+    border-radius: 10px;
+    font-size: 18px;
+}
+
+.btn:hover {
+    background-color: #fff;
+    color: #210B61;
+}

@@ -4,17 +4,7 @@ import  authOperations from '../../redux/auth/authOperations';
 import * as React from 'react';
 import Input from '@mui/material/Input';
 import Button from '@mui/material/Button';
-
-const styles = {
-  form: {
-    width: 320,
-  },
-  label: {
-    display: 'flex',
-    flexDirection: 'column',
-    marginBottom: 15,
-  },
-};
+import css from './RegisterForm.module.css';
 
 const RegisterForm = () => {
   const dispatch = useDispatch();
@@ -56,10 +46,10 @@ const RegisterForm = () => {
 
   return (
     <div>
-      <h1>Register page</h1>
+      <h1 className={css.form__title}>Register Form</h1>
 
-      <form onSubmit={handleSubmit} style={styles.form} autoComplete="off">
-        <label style={styles.label}>
+      <form onSubmit={handleSubmit} className={css.form} autoComplete="off">
+        <label className={css.label}>
           Name
           <Input
             variant="contained"
@@ -72,7 +62,7 @@ const RegisterForm = () => {
           />
         </label>
 
-        <label style={styles.label}>
+        <label className={css.label}>
           Email
           <Input
             variant="contained"
@@ -85,7 +75,7 @@ const RegisterForm = () => {
           />
         </label>
 
-        <label style={styles.label}>
+        <label className={css.label}>
           Password
           <Input
             variant="contained"
@@ -98,12 +88,12 @@ const RegisterForm = () => {
           />
         </label>
 
-        <Button variant="contained" type="submit">
+        <Button variant="contained" type="submit" className={css.btn}>
           Register
         </Button>
       </form>
     </div>
-);
+  );
 };
 
  export default RegisterForm;

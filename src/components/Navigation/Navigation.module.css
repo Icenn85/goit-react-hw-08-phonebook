@@ -1,13 +1,21 @@
 .active {
-    color: #A9A9F5;
+  display: inline-block;
+  text-decoration: none;
+  padding: 12px;
+  font-weight: 500;
+  color: #A9A9F5;
+  text-decoration: underline;
+  background-color: #fff;
+  font-size: 18px;
 }
 
 .link {
-    display: inline-block;
-    text-decoration: none;
-    padding: 12px;
-    font-weight: 500;
-    color: #210B61;
-    font-size: 18px;
+  display: inline-block;
+  text-decoration: none;
+  padding: 12px;
+  font-weight: 500;
+  color: #A9A9F5;
+  background-color: #210B61;
+  border-radius: 10px;
+  font-size: 18px;
 }
-
