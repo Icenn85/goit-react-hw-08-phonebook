@@ -6,6 +6,7 @@ import authOperations from '../redux/auth/authOperations';
 import AppBar from './AppBar/AppBar';
 import RestrictedRoute from './RestrictedRoute';
 import PrivatRoute from './PrivateRoute';
+import { Audio } from 'react-loader-spinner';
 import css from './App.module.css';
 
 const ContactsPage = lazy(() => import('../pages/ContactsPage'));
@@ -24,37 +25,53 @@ export function App() {
 
   return (
     <div className={css.container}>
-      <AppBar />
-      <Suspense fallback={<p>LOADING...</p>}>
-        {!isRefreshing && (
-          <Routes>
-            <Route path="/" element={<HomePage />} />
+      {isRefreshing ? (
+        <Audio heigth="350" width="350" color="grape" arialLabel="loading" />
+      ) : (
+        <>
+          <AppBar />
+          <Suspense
+            fallback={
+              <Audio
+                heigth="350"
+                width="350"
+                color="grape"
+                arialLabel="loading"
+              />
+            }
+          >
+            <Routes>
+              <Route path="/" element={<HomePage />} />
 
-            <Route
-              path="/register"
-              element={
-                <RestrictedRoute
-                  component={RegisterPage}
-                  redirectTo="/contacts"
-                />
-              }
-            />
-            <Route
-              path="/login"
-              element={
-                <RestrictedRoute component={LoginPage} redirectTo="/contacts" />
-              }
-            />
-            <Route
-              path="/contacts"
-              element={
-                <PrivatRoute component={ContactsPage} redirectTo="/login" />
-              }
-            />
-            <Route path="*" element={<Navigate to="/" />} />
-          </Routes>
-        )}
-      </Suspense>
+              <Route
+                path="/register"
+                element={
+                  <RestrictedRoute
+                    component={RegisterPage}
+                    redirectTo="/contacts"
+                  />
+                }
+              />
+              <Route
+                path="/login"
+                element={
+                  <RestrictedRoute
+                    component={LoginPage}
+                    redirectTo="/contacts"
+                  />
+                }
+              />
+              <Route
+                path="/contacts"
+                element={
+                  <PrivatRoute component={ContactsPage} redirectTo="/login" />
+                }
+              />
+              <Route path="*" element={<Navigate to="/" />} />
+            </Routes>
+          </Suspense>
+        </>
+      )}
     </div>
   );
 }

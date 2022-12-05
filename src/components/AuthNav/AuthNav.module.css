@@ -20,3 +20,8 @@
   font-size: 18px;
 }
 
+.link:hover {
+    background-color: #fff;
+    color: #210B61;
+}
+
