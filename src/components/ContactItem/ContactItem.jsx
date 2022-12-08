@@ -11,7 +11,7 @@ export function ContactItem({ id, name, number }) {
   return (
     <li key={id} className={css.contacts__item}>
       <p className={css.contacts__text}>{name}:</p>
-      <p className={css.contact__text}>{number}</p>
+      <p className={css.contacts__text}>{number}</p>
       <Button variant="contained"
         type="button"
         className={css.btn}

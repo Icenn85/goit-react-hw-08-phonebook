@@ -1,7 +1,12 @@
+.container {
+  background-color: #fff;
+}
+
 .filter__title {
   display: flex;
   flex-direction: column;
   font-size: 20px;
+  color: #210B61;
 }
 
 .filter__input {

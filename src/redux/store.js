@@ -24,15 +24,13 @@ const authPersistConfig = {
 const persistedAuthReducer = persistReducer(authPersistConfig, authReducer);
 
 const rootReducer = combineReducers({
+  auth: persistedAuthReducer,
   contacts: contactsSlice.reducer,
   filter: filterSlice.reducer,
 });
 
 export const store = configureStore({
-  reducer: {
-    auth: persistedAuthReducer,
-    contacts: rootReducer,
-  },
+  reducer: rootReducer,
   middleware: getDefaultMiddleware =>
     getDefaultMiddleware({
       serializableCheck: {

@@ -6,8 +6,9 @@
 }
 .contacts__text {
   margin-right: 12px;
+  color: #210B61;
 }
-.btn {
+/* .btn {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -21,4 +22,17 @@
 
 .btn:hover {
   background-color: #ffffff;
+} */
+
+.btn {
+    font-weight: 500;
+    color: #A9A9F5;
+    background-color: #210B61;
+    border-radius: 10px;
+    font-size: 18px;
+}
+
+.btn:hover {
+    background-color: #fff;
+    color: #210B61;
 }

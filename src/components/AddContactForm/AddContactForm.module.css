@@ -1,6 +1,8 @@
 .form {
   border: 2px solid #210B61;
   border-radius: 10px;
+  margin-top: 50px;
+  margin-bottom: 20px;
   padding: 15px;
 }
 
@@ -8,6 +10,7 @@
   display: flex;
   flex-direction: column;
   font-size: 15px;
+  color: #210B61;
 }
 
 .input {
@@ -19,15 +22,16 @@
 }
 
 .btn {
-    cursor: pointer;
-    border-radius: 5px;
-    padding: 12px 24px;
-    font-weight: 700;
     display: flex;
-    align-items: center;
-    background-color: #A9A9F5;
+    cursor: pointer;
+    font-weight: 500;
+    color: #A9A9F5;
+    background-color: #210B61;
+    border-radius: 10px;
+    font-size: 18px;
 }
 
 .btn:hover {
-    background-color: #ffffff;
+    background-color: #fff;
+    color: #210B61;
 }

@@ -21,10 +21,10 @@ const ContactsPage = () => {
         flexDirection="column"
         justifyContent="center"
         alignItems="center"
-        backgroundColor="#ccf4ff"
+        backgroundColor="#fff"
         paddingBottom="250px"
       >
-        <Typography component="h2" variant="h4">
+        <Typography component="h2" variant="h4" color="#210B61">
           Contacts
         </Typography>
         <SearchFilter />

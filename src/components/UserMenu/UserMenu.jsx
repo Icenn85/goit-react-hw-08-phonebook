@@ -14,9 +14,8 @@ const UserMenu = () => {
         <p className={css.name}>Welcome, {name}</p>
 
         <Button
-          variant="contained"
           className={css.btn}
-          size="medium"
+          variant="contained"
           type="button"
           onClick={() => dispatch(authOperations.logOut())}
         >

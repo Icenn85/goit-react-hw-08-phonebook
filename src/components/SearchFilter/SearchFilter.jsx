@@ -14,9 +14,10 @@ const SearchFilter = () => {
   };
 
   return (
-    <div>
+    <div className={css.container}>
       <h3 className={css.filter__title}>Find contacts by name</h3>
-      <Input variant="contained" 
+      <Input
+        variant="contained"
         placeholder="Search"
         type="text"
         name="filter"
