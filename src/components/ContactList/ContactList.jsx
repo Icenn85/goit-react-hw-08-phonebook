@@ -4,7 +4,7 @@ import {
   selectFilteredContacts,
   selectIsLoading,
   selectError,
-} from '../../redux/selectors';
+} from '../../redux/contacts/selectors';
 import { ContactItem } from '../ContactItem/ContactItem';
 // import { getContacts, deleteContactAction } from '../../redux/contactsSlice';
 // import { getFilterValue } from '../../redux/filterSlice';

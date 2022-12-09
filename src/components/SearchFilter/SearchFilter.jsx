@@ -1,8 +1,8 @@
 import React from 'react';
 import css from './SearchFilter.module.css';
 import { useSelector, useDispatch } from 'react-redux';
-import { filterContactsAction } from '../../redux/filterSlice';
-import { selectFilterValue } from '../../redux/selectors';
+import { filterContactsAction } from '../../redux/contacts/filterSlice';
+import { selectFilterValue } from '../../redux/contacts/selectors';
 import Input from '@mui/material/Input';
 
 const SearchFilter = () => {

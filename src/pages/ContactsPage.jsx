@@ -4,7 +4,7 @@ import  AddContactForm  from '../components/AddContactForm/AddContactForm';
 import  SearchFilter  from '../components/SearchFilter/SearchFilter';
 import  ContactList  from '../components/ContactList/ContactList';
 import { Typography, Box } from '@mui/material';
-import { fetchContacts } from '../redux/operations';
+import { fetchContacts } from '../redux/contacts/operations';
 
 const ContactsPage = () => {
   const dispatch = useDispatch();
